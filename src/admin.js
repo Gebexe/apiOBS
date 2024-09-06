@@ -10,21 +10,22 @@ export default function Admin () {
    /*  const Navegar = () => {
         return <Navigate to="/view" Player1 = {Player1}/>
     } */
+    fetch("http://localhost:3000/player1",)
     useEffect(() =>{localStorage.setItem('Data', [Player1, Player2, Score1, Score2])},
     [Player1, Player2, Score1, Score2])
     return <div>
      
     <h1>Player 1 </h1>
-    <input className="player1" placeholder="GBX" value={Player1}
+    <input className="player1" placeholder="Player 1" value={Player1}
      onChange={(e) => {setPlayer1(e.target.value)}} ></input>
-      <input className="score1" placeholder="99" value={Score1}
+      <input className="score1" placeholder="0" value={Score1}
      onChange={(e) => {setScore1(e.target.value)}} ></input>
      <h1>Player 2 </h1>
-    <input className="player2" placeholder="dork" value={Player2}
+    <input className="player2" placeholder="Player 2" value={Player2}
      onChange={(e) => {setPlayer2(e.target.value)}} ></input>
-       <input className="score2" placeholder="99" value={Score2}
+       <input className="score2" placeholder="0" value={Score2}
      onChange={(e) => {setScore2(e.target.value)}} ></input>
-     <button>vista</button>
+     <a href="/view" target='_blank'><button>vista</button></a>
   
      </div>
      
