@@ -1,7 +1,7 @@
 /* import player1 from "../src/Archivos/player1.txt"
 import FileSaver from 'file-saver' */
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
-import Admin from "./admin"
+import Admin from "./components/admin/admin"
 import View from "./view"
 
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import "./admin.css"
 
 export default function Admin () {
 
@@ -13,8 +14,9 @@ export default function Admin () {
     fetch("http://localhost:3000/player1",)
     useEffect(() =>{localStorage.setItem('Data', [Player1, Player2, Score1, Score2])},
     [Player1, Player2, Score1, Score2])
-    return <div>
-     
+    return <div className="container">
+     <form className="score-form">
+     <div className="form-group">
     <h1>Player 1 </h1>
     <input className="player1" placeholder="Player 1" value={Player1}
      onChange={(e) => {setPlayer1(e.target.value)}} ></input>
@@ -25,8 +27,10 @@ export default function Admin () {
      onChange={(e) => {setPlayer2(e.target.value)}} ></input>
        <input className="score2" placeholder="0" value={Score2}
      onChange={(e) => {setScore2(e.target.value)}} ></input>
-     <a href="/view" target='_blank'><button>vista</button></a>
-  
+     
+     </div>
+     </form>
+     <a href="/view" target='_blank' className="score-form button"><button>vista</button></a>
      </div>
      
 }
